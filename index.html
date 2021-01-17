@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="slider">
+        <div id="gal">
+            <div class="items">
+                <img src="images/1.jpg" />
+                <p>Item1 </p>
+            </div>
+            <div class="items">
+                <img src="images/2.jpg" />
+                <p>Item2 </p>
+            </div>
+            <div class="items">
+                <img src="images/3.jpg" />
+                <p>Item3 </p>
+            </div>
+            <div class="items">
+                <img src="images/4.jpg" />
+                <p>Item4 </p>
+            </div>
+            <div class="items">
+                <img src="images/5.jpg" />
+                <p>Item5 </p>
+            </div>
+        </div>
+        <div id="right" onClick="right()"></div>
+        <div id="left" onClick="left()"></div>
+    </div>
+
+    <script>
+        let pos = 0;
+        function left() {
+            if (pos > -2400) {
+                pos = pos - 600;
+                gal.style.left = pos + "px";
+            }
+            else if (pos == -2400) {
+                return
+            }
+        }
+        function right() {
+            if (pos < -1) {
+                 pos = pos + 600;
+                gal.style.left = pos + "px";
+            }
+        }
+     
+    </script>
+</body>
+</html>
